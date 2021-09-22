@@ -1,0 +1,21 @@
+
+.navbar-container{
+    .Appbar-style {
+        position: relative;
+        background: #83b04f !important;
+        .toolbar-style {
+            img {
+                width: 60px;
+                height: 60px;
+              
+            }
+        .navbar-title{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            top: 50%;
+        }
+        }
+    }
+}
+
