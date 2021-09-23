@@ -41,7 +41,7 @@ export default function DroneTable() {
   const classes = useStyles();
   const [data, setdata] = useState([]);
   const [page, setPage] = useState(0);
-  const [count, setCount] = useState(data.length);
+  const [count, setCount] = useState(0);
   const [rowsPerPage, setRowPerPage] = useState(6);
 
   useEffect(async () => {
@@ -49,6 +49,7 @@ export default function DroneTable() {
       await axios.get(`http://172.22.2.172:4000/api/jobs/`)
     ).data;
     setdata(res.data);
+    setCount(res.data.length)
   }, []);
 
   const handleChangePage = (event, newPage) => {
